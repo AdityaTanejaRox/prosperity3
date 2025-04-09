@@ -1,8 +1,8 @@
-from algorithms.strategy1 import Trader
-from utils.logger import setup_logger
+from strategies.strategy1 import Trader
+from utils.logger import get_logger
 
 # Initialize trader and logger
-logger = setup_logger("main")
+logger = get_logger("main")
 trader = Trader()
 
 def run_strategy(state):
@@ -12,8 +12,8 @@ def run_strategy(state):
     return result
 
 if __name__ == "__main__":
-    # This is typically not run this way for IMC; the platform runs it.
-    # But you can run backtests or mocks here if needed.
+    # This is typically not run directly; the platform handles it.
+    # But you can run local tests or mock state here.
     logger.info("Running main as script (for local testing)")
-    sample_state = {}  # Replace this with mock or test state
+    sample_state = {}  # Replace this with a mock test state for debugging
     run_strategy(sample_state)

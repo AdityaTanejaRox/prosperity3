@@ -1,5 +1,5 @@
 import unittest
-from src.algorithms.strategy1 import Trader
+from src.strategies.strategy1 import Trader
 
 class TestStrategy1(unittest.TestCase):
     def setUp(self):
